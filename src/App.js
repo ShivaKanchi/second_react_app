@@ -1,20 +1,18 @@
-import Classcomponent from './components/Classcomponent';
+import Classcomponent from './pages/Classcomponent';
 import './App.css';
-import Functioncomponent from './components/Functioncomponenet';
+import Functioncomponent from './pages/Functioncomponenet';
 import { useState } from 'react';
+import { Routes, Route } from "react-router-dom";
+
 
 function App() {
   const [name, setName] = useState("Shiva");
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Class Component</h1>
-        <Classcomponent />
-        <br />
-        <h1>Functional Component</h1>
-        <Functioncomponent name={name} setName={setName} />
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<h1>Helo</h1>} />
+      <Route path="/class" element={<Classcomponent />} />
+      <Route path="/function" element={<Functioncomponent name={name} setName={setName} />} />
+    </Routes>
   );
 }
 
