@@ -8,7 +8,16 @@ const Functioncomponent = (props) => {
     useEffect(() => {
         console.log("Component did mount");
     }, []);
+
+    useEffect(() => {
+        console.log("Component did update");
+    });
+
+    useEffect(() => {
+        console.log("change name did update");
+    }, [changename]);
     return (
+
         <div>
             <p>This is Functional Component</p>
             <button onClick={() => setCount(count + 1)}>Click me to increase count</button>
