@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import BaseHoc from "../hoc/BaseHoc";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 const Functioncomponent = (props) => {
     const [count, setCount] = useState(0);
     const [changename, setChangeName] = useState("");
-
+    const prevRef = useRef();
     useEffect(() => {
         console.log("Component did mount");
     }, []);
@@ -16,6 +16,13 @@ const Functioncomponent = (props) => {
     useEffect(() => {
         console.log("change name did update");
     }, [changename]);
+    useEffect(() => {
+        console.log("props did update");
+    }, [props]);
+    useEffect(() => {
+        console.log(prevRef.current.innerHtml);
+    }, [count]);
+
     return (
 
         <div>
