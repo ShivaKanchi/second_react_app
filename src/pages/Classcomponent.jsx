@@ -17,6 +17,11 @@ class Classcomponent extends React.Component {
         return (
             <>
                 <h2>This is Class Component</h2 >
+                <button onClick={() => this.setState({
+                    ...this.state,
+                    age: this.state.age + 1,
+                })}>add 1 to age </button>
+                <h1>{this.state.age}</h1>
             </>
         );
     }
