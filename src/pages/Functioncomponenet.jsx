@@ -16,13 +16,18 @@ const Functioncomponent = (props) => {
     useEffect(() => {
         console.log("change name did update");
     }, [changename]);
+
     useEffect(() => {
         console.log("props did update");
     }, [props]);
+
     useEffect(() => {
         console.log(prevRef.current.innerHtml);
     }, [count]);
 
+    useEffect(() => {
+        return console.log("props did update");
+    });
     return (
 
         <div>
