@@ -7,14 +7,20 @@ class Classcomponent extends React.Component {
             name: "Shiva",
             age: 20
         }
+        console.log("Constructor");
+    }
+    componentDidMount() {
+        console.log("componenet mounted");
     }
     render() {
+        console.log("Render");
         return (
             <>
                 <h2>This is Class Component</h2 >
             </>
         );
     }
+
 }
 
 export default BaseHoc(Classcomponent);
