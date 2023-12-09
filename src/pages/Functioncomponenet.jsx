@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import BaseHoc from "../hoc/BaseHoc";
 import { useEffect, useRef } from "react";
+
 const Functioncomponent = (props) => {
     const [count, setCount] = useState(0);
     const [changename, setChangeName] = useState("");

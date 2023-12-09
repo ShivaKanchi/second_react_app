@@ -1,5 +1,4 @@
 import Classcomponent from './pages/Classcomponent';
-import './App.css';
 import Functioncomponent from './pages/Functioncomponenet';
 import { useState } from 'react';
 import { Routes, Route } from "react-router-dom";
